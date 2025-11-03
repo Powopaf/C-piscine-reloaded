@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 17:37:49 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 18:16:33 by pifourni         ###   ########.fr       */
+/*   Created: 2025/11/03 18:11:40 by pifourni          #+#    #+#             */
+/*   Updated: 2025/11/03 18:16:16 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-int	ft_isalpha(unsigned char c);
-int	ft_isdigit(unsigned char c);
-int ft_isalnum(unsigned char c);
-
-#endif
+int	ft_isalnum(unsigned char c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	return (0);
+}
