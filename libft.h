@@ -6,7 +6,7 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 17:37:49 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 21:27:35 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/04 10:17:14 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int				ft_isprint(unsigned char c);
 unsigned int	ft_strlen(const char *s);
 void			*ft_memset(void *s, int c, unsigned int n);
 void			ft_bzero(void *s, unsigned int n);
-
+void			*ft_memcpy(void *dest, const void *src, unsigned int n);
 #endif
