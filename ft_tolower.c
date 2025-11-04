@@ -6,11 +6,11 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:52:34 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/04 17:53:59 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:40:01 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

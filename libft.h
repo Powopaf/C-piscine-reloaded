@@ -6,7 +6,7 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 17:37:49 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/04 17:46:42 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:33:18 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void			*ft_memmove(void *dest, const void *src, unsigned int n);
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int dsize);
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int dsize);
 int				ft_toupper(int c);
+int				ft_tolower(int c);
 
 #endif
