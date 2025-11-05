@@ -6,13 +6,13 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:21:11 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 18:58:23 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:24:46 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned char c)
+int	ft_isascii(int c)
 {
-	if (c < 128)
+	if (c >= 0 && c < 128)
 	{
 		return (1);
 	}

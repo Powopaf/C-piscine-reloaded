@@ -6,13 +6,15 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 19:42:20 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 19:45:46 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:35:40 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

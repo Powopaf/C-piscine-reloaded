@@ -6,11 +6,11 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:11:40 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 18:16:16 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:21:34 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(unsigned char c)
+int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{

@@ -6,11 +6,11 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 19:28:18 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 19:31:51 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:25:15 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(unsigned char c)
+int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
 	{

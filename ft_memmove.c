@@ -6,13 +6,15 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:28:39 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/04 16:34:20 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:46:37 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (n == 0 || dest == src)
 	{

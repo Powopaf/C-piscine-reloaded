@@ -6,13 +6,15 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 21:22:44 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 21:27:06 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:43:30 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, unsigned int n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

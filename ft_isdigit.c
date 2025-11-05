@@ -6,11 +6,11 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:00:12 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/03 18:01:33 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:18:35 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(unsigned char c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{
