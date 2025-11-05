@@ -6,14 +6,14 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 21:06:03 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/04 21:47:18 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 11:43:50 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	unsigned int i;
-	
+	unsigned int	i;
+
 	i = 0;
 	if (n == 0)
 	{

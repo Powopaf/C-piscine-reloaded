@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 19:41:58 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/05 11:41:26 by pifourni         ###   ########.fr       */
+/*   Created: 2025/11/05 11:47:51 by pifourni          #+#    #+#             */
+/*   Updated: 2025/11/05 13:24:47 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+static unsigned int skip_whitespaces(const char *nptr)
 {
-	unsigned int	i;
 
-	i = 0;
-	while (s[i] != '\0' && s[i] != c)
-	{
-		i++;
-	}
-	return ((char *)(s + i));
+}
+
+static unsigned int	sign(const char *nptr, unsigned int i)
+{
+
+}
+
+int	ft_atoi(const char *nprt)
+{
+
 }

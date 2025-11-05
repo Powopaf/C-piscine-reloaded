@@ -6,13 +6,13 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 20:21:35 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/04 20:56:15 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 11:43:19 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char 			*last;
+	char			*last;
 	unsigned int	i;
 
 	i = 0;
@@ -26,8 +26,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (c == '\0')
 	{
-		return (char *)(s + i);
+		return ((char *)(s + i));
 	}
 	return (last);
-	
 }

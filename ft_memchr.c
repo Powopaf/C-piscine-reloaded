@@ -6,7 +6,7 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 22:10:19 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/04 22:22:32 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/05 11:44:14 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 	{
 		if (((unsigned char *)s)[i] == c)
 		{
-			return (void *)(s + i);
+			return ((void *)(s + i));
 		}
 		i++;
 	}
