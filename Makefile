@@ -6,7 +6,7 @@
 #    By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 00:39:50 by pifourni          #+#    #+#              #
-#    Updated: 2025/11/07 11:29:13 by pifourni         ###   ########.fr        #
+#    Updated: 2025/11/07 14:19:23 by pifourni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
  
@@ -14,7 +14,7 @@
 
 CC = cc
 LIB =
-CFLAGS = -Wall -Wextra -Werror -Iincludes 
+CFLAGS = -g -Wall -Wextra -Werror -Iincludes 
 SRC = ./ft_isalpha.c \
 	  ./ft_isdigit.c \
 	  ./ft_isalnum.c \
@@ -40,6 +40,7 @@ SRC = ./ft_isalpha.c \
 	  ./ft_strdup.c \
 	  ./ft_substr.c \
 	  ./ft_strjoin.c \
+	  ./ft_strtrim.c \
 	  ./main.c
 OBJ = $(SRC:.c=.o)
 NAME = libft.out#libft.a
