@@ -6,7 +6,7 @@
 /*   By: pifourni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:59:51 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/07 15:04:23 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/08 11:15:56 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,47 +17,45 @@ static int	is_charset(char a, char c)
 	return (c == a);
 }
 
-static int	len(char const *str, char c, int i)
+static size_t	len(char const *str, char c, int i)
 {
-	int	len;
-	int	j;
+	size_t	l;
 
-	len = 0;
-	j = 0;
-	while (str[i] != '\0' && !is_charset(str[i], c))
+	l = 0;
+	while (str[i + l] != '\0' && !is_charset(str[i + l], c))
 	{
-		i++;
+		l++;
 	}
-	return (i);
+	return (l);
 }
 
 static int	count_word(char const *str, char c)
 {
 	int	i;
 	int	res;
-	int	s;
 
 	i = 1;
 	res = 0;
-	s = 0;
 	while (str[i] != '\0')
 	{
-		if (is_charset(str[i], c) && !is_charset(str[i - 1], c))
+		while (str[i] != '\0' && is_charset(str[i], c))
 		{
-			res++;
+			i++;
 		}
-		if (!is_charset(str[i], c))
+		if (str[i] == '\0')
 		{
-			s = 1;
+			break;
 		}
-		i++;
-	}
-	if (!is_charset(str[i - 1], c))
 		res++;
-	return (res * s);
+		while (str[i] != '\0' && !is_charset(str[i], c))
+		{
+			i++;
+		}
+	}
+	return (res);
 }
 
-static void	copy(char **res, char const *str, char c, int size)
+static int	copy(char **res, char const *str, char c, int size)
 {
 	int	i;
 	int	j;
@@ -65,7 +63,7 @@ static void	copy(char **res, char const *str, char c, int size)
 
 	i = 0;
 	j = 0;
-	while (i < size - 1 && str[j] != '\0')
+	while (i < size && str[j] != '\0')
 	{
 		k = 0;
 		if (str[j] != '\0' && is_charset(str[j], c))
@@ -73,7 +71,13 @@ static void	copy(char **res, char const *str, char c, int size)
 			j++;
 			continue ;
 		}
-		res[i] = malloc(sizeof(char) * len(str, c, j) + 1);
+		res[i] = malloc(sizeof(char) * (len(str, c, j) + 1));
+		if (!res[i])
+		{
+			while (--i >= 0)
+				free(res[i]);
+			return (0);
+		}
 		while (str[j] != '\0' && !is_charset(str[j], c))
 		{
 			res[i][k] = str[j];
@@ -83,6 +87,7 @@ static void	copy(char **res, char const *str, char c, int size)
 		res[i][k] = '\0';
 		i++;
 	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -98,7 +103,11 @@ char	**ft_split(char const *s, char c)
 	res = malloc(sizeof(char *) * (size + 1));
 	if (!res)
 		return (res);
-	copy(res, s, c, size + 1);
-	res[size + 1] = NULL;
+	if (!copy(res, s, c, size))
+	{
+		free(res);
+		return (NULL);
+	}
+	res[size] = NULL;
 	return (res);
 }
