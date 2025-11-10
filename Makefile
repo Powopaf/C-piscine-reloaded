@@ -6,7 +6,7 @@
 #    By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 00:39:50 by pifourni          #+#    #+#              #
-#    Updated: 2025/11/10 13:56:52 by pifourni         ###   ########.fr        #
+#    Updated: 2025/11/10 15:05:39 by pifourni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
  
@@ -50,15 +50,15 @@ SRC = ./ft_isalpha.c \
 	  ./ft_putendl_fd.c \
 	  ./ft_putnbr_fd.c
 
-SRC_B = ./ft_lstnew.c \
-		./ft_lstadd_front.c \
-		./ft_lstsize.c \
-		./ft_lstlast.c \
-		./ft_lstadd_back.c \
-		./ft_lstdelone.c \
-		./ft_lstclear.c \
-		./ft_lstiter.c \
-		./ft_lstmap.c \
+SRC_B = ./ft_lstnew_bonus.c \
+		./ft_lstadd_front_bonus.c \
+		./ft_lstsize_bonus.c \
+		./ft_lstlast_bonus.c \
+		./ft_lstadd_back_bonus.c \
+		./ft_lstdelone_bonus.c \
+		./ft_lstclear_bonus.c \
+		./ft_lstiter_bonus.c \
+		./ft_lstmap_bonus.c \
 
 OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)

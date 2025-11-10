@@ -6,7 +6,7 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 17:37:49 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/10 11:00:44 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/10 15:14:12 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct 	s_list
+typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
+	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 int		ft_isalpha(int c);
