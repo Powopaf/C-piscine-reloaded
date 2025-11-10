@@ -6,7 +6,7 @@
 /*   By: pifourni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:15:29 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/10 10:27:43 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/10 13:03:12 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+	{
+		return ;
+	}
 	new->next = *lst;
 	*lst = new;
 }

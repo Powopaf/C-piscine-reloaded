@@ -6,7 +6,7 @@
 /*   By: pifourni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:01:06 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/10 11:16:17 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/10 13:36:32 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,25 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*res;
 	t_list	*c;
-	t_list 	*p;
+	t_list	*p;
+	void	*v;
 
-	c = lst;
-	res = malloc(sizeof(t_list));
-	if (!res)
-	{
+	if (!f || !del)
 		return (NULL);
-	}
-	p = res;
+	c = lst;
+	res = NULL;
 	while (c != NULL)
 	{
-		p->content = f(c->content);
-		p->next = malloc(sizeof(t_list));
-		if (!p->next)
+		v = f(c->content);
+		p = ft_lstnew(v);
+		if (p == NULL)
 		{
+			del(v);
 			ft_lstclear(&res, del);
 			return (NULL);
 		}
-		p = p->next;
+		ft_lstadd_back(&res, p);
 		c = c->next;
 	}
-	p->next = NULL;
 	return (res);
 }

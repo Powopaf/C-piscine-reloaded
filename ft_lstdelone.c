@@ -6,7 +6,7 @@
 /*   By: pifourni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:43:15 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/10 10:46:44 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/10 13:13:22 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
+	if (!lst || !del)
+	{
+		return ;
+	}
 	del(lst->content);
 	free(lst);
 }

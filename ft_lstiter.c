@@ -6,7 +6,7 @@
 /*   By: pifourni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:54:39 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/10 11:00:24 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/10 13:19:54 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*c;
 
+	if (!lst || !f)
+	{
+		return ;
+	}
 	c = lst;
 	while (c != NULL)
 	{
