@@ -6,7 +6,7 @@
 #    By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 00:39:50 by pifourni          #+#    #+#              #
-#    Updated: 2025/11/10 13:46:10 by pifourni         ###   ########.fr        #
+#    Updated: 2025/11/10 13:56:52 by pifourni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
  
@@ -14,7 +14,7 @@
 
 CC = cc
 LIB =
-CFLAGS = -Wall -Wextra -Werror -Iincludes 
+CFLAGS = -Wall -Wextra -Werror -I. -Iincludes 
 SRC = ./ft_isalpha.c \
 	  ./ft_isdigit.c \
 	  ./ft_isalnum.c \
@@ -48,8 +48,7 @@ SRC = ./ft_isalpha.c \
 	  ./ft_putchar_fd.c \
 	  ./ft_putstr_fd.c \
 	  ./ft_putendl_fd.c \
-	  ./ft_putnbr_fd.c \
-	  ./main.c
+	  ./ft_putnbr_fd.c
 
 SRC_B = ./ft_lstnew.c \
 		./ft_lstadd_front.c \
