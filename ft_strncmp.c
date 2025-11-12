@@ -6,7 +6,7 @@
 /*   By: pifourni <pifourni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 21:06:03 by pifourni          #+#    #+#             */
-/*   Updated: 2025/11/05 11:43:50 by pifourni         ###   ########.fr       */
+/*   Updated: 2025/11/12 09:43:04 by pifourni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 	{
 		return (0);
 	}
-	return (s1[i] - s2[i]);
+	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
